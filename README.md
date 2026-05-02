@@ -52,12 +52,12 @@ All routes are prefixed with `/api`.
 
 ## 🧪 Testing
 
-Feel free to hit the endpoints using Postman, Insomnia, or just your terminal. Here's a quick cURL command to create your first task:
-
-\`\`\`bash
-curl -X POST http://localhost:3000/api/tasks \
--H "Content-Type: application/json" \
--d '{"title": "Review assignment", "description": "Check out the new Node API submission", "completed": false}'
-\`\`\`
+> **💡 Postman Collection Included!** 
+> To make testing as easy as possible, I've included an exported Postman collection. 
+> 1. Open Postman.
+> 2. Click **Import**.
+> 3. Select the `Task_manager_backend.postman_collection.json` file located in the root of this repository.
+> 
+> This will instantly load all the pre-configured API requests into your workspace!
 
 Thanks again for reviewing! 
