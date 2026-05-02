@@ -10,18 +10,29 @@
       "name": "Get All Tasks",
       "request": {
         "method": "GET",
-        "header": []
-      },
-      "response": []
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/tasks",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "tasks"]
+        }
+      }
     },
     {
       "name": "Create Task",
       "request": {
         "method": "POST",
-        "header": [],
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"title\": \"Review assignment\",\n  \"description\": \"Check out the new Node API submission\",\n  \"completed\": false\n}\n",
+          "raw": "{\n  \"title\": \"Review assignment\",\n  \"description\": \"Check out the new Node API submission\",\n  \"completed\": false\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -31,41 +42,67 @@
         "url": {
           "raw": "http://localhost:3000/api/tasks",
           "protocol": "http",
-          "host": [
-            "localhost"
-          ],
+          "host": ["localhost"],
           "port": "3000",
-          "path": [
-            "api",
-            "tasks"
-          ]
+          "path": ["api", "tasks"]
         }
-      },
-      "response": []
+      }
     },
     {
-      "name": "Get task by ID",
+      "name": "Get Task by ID",
       "request": {
         "method": "GET",
-        "header": []
-      },
-      "response": []
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/tasks/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "tasks", "1"]
+        }
+      }
     },
     {
       "name": "Update Task",
       "request": {
-        "method": "GET",
-        "header": []
-      },
-      "response": []
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Review assignment completely\",\n  \"description\": \"Check out the new Node API submission and give feedback\",\n  \"completed\": true\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/tasks/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "tasks", "1"]
+        }
+      }
     },
     {
       "name": "Delete Task",
       "request": {
-        "method": "GET",
-        "header": []
-      },
-      "response": []
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/tasks/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "tasks", "1"]
+        }
+      }
     }
   ]
 }
